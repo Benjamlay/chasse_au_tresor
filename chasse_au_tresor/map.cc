@@ -38,5 +38,18 @@ int convert_to_index(char x, int y)
 
 }
 
+bool DigInTheMap(char x, int y)
+{
+	if(x < 'A' || x >= 'A' + kRowSize)
+	{
+		return false;
+	}
 
+	if(y < 1 || y >= 1 + kColSize)
+	{
+		return false;
+	}
+
+	return true;
+}
 

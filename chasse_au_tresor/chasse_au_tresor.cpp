@@ -19,16 +19,21 @@ int main()
 
 	for(int Round_left = 1; Round_left < 5; Round_left++)
 	{
-		std::cout << "enter a letter between A and E " << std::endl;
+		std::cout << "enter the coordinates that you want to dig (example : A1 " << std::endl;
 		std::cin >> xPlayer >> yPlayer;
-		//std::cout << "enter a number between 1 and 4 " << std::endl;
-		//std::cin >> yPlayer;
 		int Pidx = convert_to_index(xPlayer, yPlayer);
+		
 
+		
+		
 		if (Pidx == Tidx)
 		{
 			std::cout << "you won" << std::endl;
 			break;
+		}
+		else if(!DigInTheMap(xPlayer, yPlayer))
+		{
+			std::cout << "you can't dig outside the map" << std::endl;
 		}
 		else
 		{
