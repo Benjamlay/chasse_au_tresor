@@ -17,7 +17,7 @@ int main()
 
 	int Pidx = 0;
 
-	for(int Round_left = 1; Round_left < 5; Round_left++)
+	for(int Round_left = 0; Round_left < 5; Round_left++)
 	{
 		std::cout << "enter the coordinates that you want to dig (example : A1 " << std::endl;
 		std::cin >> xPlayer >> yPlayer;
@@ -35,6 +35,10 @@ int main()
 		{
 			std::cout << "you can't dig outside the map" << std::endl;
 		}
+		else if(map[Pidx] == '&')
+		{
+			std::cout << "you already dug here" << std::endl;
+		}
 		else
 		{
 			std::cout << "wrong answer" << std::endl;
@@ -45,9 +49,10 @@ int main()
 
 		
 	}
-	
+	std::cout << '\n';
 	std::cout << "___________________________________" << std::endl;
 	map[Tidx] = '$';
+	std::cout << '\n';
 	ShowMap(map);
 	
 	return 0;
