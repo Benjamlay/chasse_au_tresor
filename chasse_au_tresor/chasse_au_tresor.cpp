@@ -10,16 +10,17 @@ int main()
 	static std::array<char, kRowSize * kColSize> map;
 	map.fill('x');
 	int Tidx = rand() % (kRowSize * kColSize);
+
 	map[Tidx];
 	ShowMap(map);
+
 	char xPlayer = 'A';
 	int yPlayer = 1;
-
 	int Pidx = 0;
 
 	for(int Round_left = 0; Round_left < 5; Round_left++)
 	{
-		std::cout << "enter the coordinates that you want to dig (example : A1 " << std::endl;
+		std::cout << "enter the coordinates that you want to dig (example : A1) " << std::endl;
 		std::cin >> xPlayer >> yPlayer;
 		int Pidx = convert_to_index(xPlayer, yPlayer);
 		
