@@ -1,9 +1,9 @@
 #include <iostream>
 #include "map.h"
 
-#include <map>
 
-void ShowMap(const std::array<char, kRowSize* kColSize>& map_to_show)
+
+void ShowMap(const std::array<char, kRowSize * kColSize>& map_to_show)
 {
 	std::cout << '\t';
 	for (char letter = 'A'; letter < 'A' + kColSize; letter++)

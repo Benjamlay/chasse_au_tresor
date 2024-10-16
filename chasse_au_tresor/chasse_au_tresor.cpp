@@ -30,6 +30,7 @@ int main()
 		if (Pidx == Tidx)
 		{
 			std::cout << "you won" << std::endl;
+			std::cout << "congratulations" << std::endl;
 			break;
 		}
 		else if(!DigInTheMap(xPlayer, yPlayer))
